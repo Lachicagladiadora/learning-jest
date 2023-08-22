@@ -1,24 +1,34 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// import javascriptLogo from './javascript.svg'
+// import viteLogo from '/vite.svg'
+// import { setupCounter } from './counter.js'
+
+const sum = (a, b) => a + b 
+console.log(sum(5,9))
+
+const testSum = (a, b) => {
+  if(typeof(a) === Number && typeof(b) === Number) console.log('is correct a function')
+  else console.warn('your function is incorrect')
+}
+testSum(sum(5,7))
+
+const validateSum = ({ a, b, expected }) => {
+  const result = sum(a, b)
+
+  if (result === expected) {
+    console.log('ok')
+  }
+}
+
+validateSum({ a: 3, b: 5, expected: 8 }) // ok
+
+const cube = (n) => n*n*n
+console.log(cube(4))
+
+
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
+   <h2>open inspect</h2>
 `
 
-setupCounter(document.querySelector('#counter'))
+// setupCounter(document.querySelector('#counter'))
