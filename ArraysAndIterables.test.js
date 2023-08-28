@@ -1,6 +1,4 @@
-// const { test } = require("picomatch")
 const varArray = require("./ArraysAndIterables")
-// const { default: expect } = require("expect")
 
 test('fine, is it an array', ()=>{
   const array = [2,84,23]
